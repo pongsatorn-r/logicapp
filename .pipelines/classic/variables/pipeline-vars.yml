@@ -10,14 +10,14 @@ variables:
 
   # Resource Group
   resourceGroupLocation: 'southeastasia'
-  resourceGroupName: 'dso-logicapp'
+  resourceGroupName: 'DSO-LOGICAPP'
 
   # Storage
   storageName: 'sa$(projectName)$(suffix)'
   appServicePlanName: 'asp$(projectName)$(suffix)'
 
   #  Logic App
-  logicAppName: 'dso-logicapp'
+  logicAppName: 'dso-logic'
 
   # API Connections
   officeConnectionName: 'la-wus-$(projectName)-connection-office365'
