@@ -9,15 +9,15 @@ variables:
   devServiceConnection: 'AzureDevOps'
 
   # Resource Group
-  resourceGroupLocation: 'centralus'
-  resourceGroupName: 'LASBTrigger_group'
+  resourceGroupLocation: 'southeastasia'
+  resourceGroupName: 'dso-logicapp'
 
   # Storage
   storageName: 'sa$(projectName)$(suffix)'
   appServicePlanName: 'asp$(projectName)$(suffix)'
 
   #  Logic App
-  logicAppName: 'la-wus-$(projectName)-$(suffix)'
+  logicAppName: 'dso-logicapp'
 
   # API Connections
   officeConnectionName: 'la-wus-$(projectName)-connection-office365'
