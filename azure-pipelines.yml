@@ -7,7 +7,7 @@ pool:
   vmImage: 'ubuntu-18.04'
 
 variables:
-- template: variables/pipeline-vars.yml
+- template: '$(System.DefaultWorkingDirectory)/azure-devops-sample/.pipelines/variables/pipeline-vars.yml'
 
 jobs:
 - job: logic_app_build
