@@ -13,6 +13,8 @@ jobs:
 - job: logic_app_build
   displayName: 'Build and publish logic app'
   steps:
+  - script: 
+      pwd
   - task: AzurePowerShell@4
     displayName: 'Generate connections.json file'
     inputs:
