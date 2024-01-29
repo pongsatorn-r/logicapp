@@ -18,18 +18,18 @@ jobs:
     inputs:
       azureSubscription: '$(devServiceConnection)'
       ScriptType: 'FilePath'
-      ScriptPath: '$(System.DefaultWorkingDirectory)/azure-devops-sample/.pipelines/scripts/Generate-Connections.ps1'
+      ScriptPath: '$(System.DefaultWorkingDirectory)/.pipelines/scripts/Generate-Connections.ps1'
       FailOnStandardError: true
       azurePowerShellVersion: LatestVersion
       pwsh: true
       ScriptArguments: >-
         -resourceGroup $(resourceGroupName)
-        -outputlocation $(System.DefaultWorkingDirectory)/azure-devops-sample/connections.json
+        -outputlocation $(System.DefaultWorkingDirectory)/connections.json
 
   - task: CopyFiles@2
     displayName: 'Create project folder'
     inputs:
-      SourceFolder: '$(System.DefaultWorkingDirectory)/azure-devops-sample'
+      SourceFolder: '$(System.DefaultWorkingDirectory)'
       Contents: |
         host.json
         proxies.json
