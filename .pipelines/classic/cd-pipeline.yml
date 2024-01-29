@@ -13,7 +13,7 @@ resources:
   pipelines:
   - pipeline: cipipeline
     # TODO: Update with the name of your CI pipeline
-    source: 'ShreeDivyaMV.LogicAppsSamples'
+    source: 'Dsologicapp'
     trigger:
       branches:
       - main
@@ -27,7 +27,7 @@ stages:
   - deployment: deploy_logicapp_resources
     displayName: Deploy Logic App
     pool:
-      vmImage: ubuntu-18.04
+      vmImage: ubuntu-20.04
     environment: $(devEnvironment)
     variables:
       deploymentMode: 'Incremental'
